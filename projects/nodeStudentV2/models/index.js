@@ -1,0 +1,1 @@
+module.exports.studentSchema = require("./student.model")

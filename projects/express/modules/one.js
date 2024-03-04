@@ -1,0 +1,3 @@
+exports.one = () => {
+    return Date()
+}
