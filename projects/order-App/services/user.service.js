@@ -4,6 +4,10 @@ const addUser=(user)=>{
  return userSchema.create(user)
 }
 const getOrder=()=>{
-    return orderSchema.find().populate("userId")
+ return orderSchema.find().populate("userId")
 }
-module.exports={addUser,getOrder}
+
+const loginUser = (username)=>{
+ return userSchema.findOne({username})
+}
+module.exports={addUser,getOrder,loginUser}

@@ -4,12 +4,16 @@ const addAdmin = (body) => {
   return adminSchema.create(body);
 };
 
-const adminAuth = (username, password) => {
-  return adminSchema.findOne({ username, password });
+const adminAuth = (username) => {
+  return adminSchema.findOne({ username });
 };
 
 const alreadyExist = (username) => {
   return adminSchema.findOne({ username });
 };
 
-module.exports = { addAdmin, adminAuth, alreadyExist };
+const getAdmin = () => { 
+  return adminSchema.find();
+}
+
+module.exports = { addAdmin, adminAuth, alreadyExist,getAdmin};

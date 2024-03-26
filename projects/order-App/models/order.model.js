@@ -4,7 +4,7 @@ const orderSchema = new mongoose.Schema({
   userId: {
     required: true,
     type: mongoose.Schema.Types.ObjectId,
-    ref: "userSchema",
+    ref: "users",
   },
   productName: {
     type: String,
@@ -13,10 +13,10 @@ const orderSchema = new mongoose.Schema({
   quantity: {
     type: Number,
     required: true,
-    default:1
+    default: 1,
   },
 });
 
-const order = mongoose.model("order", orderSchema);
+const order = mongoose.model("orders", orderSchema);
 
 module.exports = order;

@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>demo</title>
+</head>
+
+<body>
+    <form action="http://localhost:5000/v1/video/add" method="post" enctype="multipart/form-data">
+        <input type="text" name="title" />
+        <input type="text" name="description" />
+        <input type="file" name="videoURL" />
+        <input type="file" name="videoThumbnail" />
+        <input type="number" name="videoDuration" />
+        <input type="text" name="isPublished" />
+        <input type="text" name="owner" />
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
